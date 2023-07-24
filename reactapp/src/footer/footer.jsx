@@ -12,14 +12,14 @@ function Footer() {
     <div className='section'>
     <div className='links'>
     <div className='div'>
-    <h1>Business</h1>
-    <Link to="/contact"><p> Contact</p></Link>
-    <Link to="/about"><p> About Us</p></Link>
+    <h1 style={{fontSize:"25px"}}>Business</h1>
+    <Link to="/contact"><p style={{fontSize:"15px"}}> Contact</p></Link>
+    <Link to="/about"><p style={{fontSize:"15px"}}> About Us</p></Link>
     </div>
   
    
     <div className='below-links'>
-    <h1>Follow Us On:</h1>
+    <h1 style={{fontSize:"25px"}}>Follow Us On:</h1>
     <div className='social'>
     <p><img src={fb} alt=""/></p>
     <p><img src={twitter} alt=""/></p>
@@ -28,7 +28,7 @@ function Footer() {
     </div>
     </div>
     <ul>
-    <h1>Any Queries?</h1>
+    <h1 style={{fontSize:"25px"}}>Any Queries?</h1>
     <Link to="/terms"><p>Terms and Condition</p></Link>
     </ul>
     </div>
