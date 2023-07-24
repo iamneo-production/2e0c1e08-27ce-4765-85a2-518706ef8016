@@ -18,11 +18,10 @@ import Footer from '../footer/footer';
         </a>
         <div> 
         <ul  className='jojo'>
-        <li><Link to='/gum'>Home</Link></li>
         <li><Link to='/contact'>Contact</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/Register">Register</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/log">Login</Link></li>
         </ul>
         </div>
         <div>
@@ -42,7 +41,7 @@ import Footer from '../footer/footer';
         <br></br>
         <br></br>
         <br></br>
-        <li><Link to="login">Log Out</Link></li>
+        <li><Link to="log">Log Out</Link></li>
         </ul>
         </div>
         <div id='mobile' onClick={this.handleClick}>
@@ -52,6 +51,9 @@ import Footer from '../footer/footer';
         </div>
         </div>
         </nav>
+        <br></br>
+        <br></br>
+        <Footer/>
     
         </div>
       

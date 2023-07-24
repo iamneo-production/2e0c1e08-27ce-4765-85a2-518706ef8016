@@ -1,16 +1,29 @@
 import React, { useState } from 'react';
 import './Appointment.css';
 
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 const BookAppointment = () => {
   const [customerName, setCustomerName] = useState('');
+  const [email,setEmail]=useState('');
   const [mobileModel, setMobileModel] = useState('');
   const [issue, setIssue] = useState('');
   const [appointmentDate, setAppointmentDate] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
+ let navigate=useNavigate('');
   const handleSubmit = (e) => {
-    e.preventDefault();
+    const apppoint={
+    customerName:customerName,
+    email:email,
+    mobileModel:mobileModel,
+    issue:issue,
+   appointmentDate:appointmentDate
+  }
+axios.post('http://127.0.0.1:8080/aDetails',apppoint);
+ 
+navigate("/")
     if (customerName && mobileModel && issue && appointmentDate) {
       setSuccessMessage('Appointment booked successfully!');
       setCustomerName('');
@@ -36,6 +49,13 @@ const BookAppointment = () => {
           id="customerName"
           value={customerName}
           onChange={(e) => setCustomerName(e.target.value)}
+        />
+        <label htmlFor="Email">Email:</label>
+        <input
+          type="email"
+          id="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <label htmlFor="mobileModel">Mobile Model:</label>
